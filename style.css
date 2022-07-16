@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.field{
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+  position: relative;
+ }
+.pitch{
+  width: 70%;
+  height: 100px;
+  background-color: bisque;
+  position: absolute;
+  top: 70%;
+  left: 15%; 
+}
+.bat{
+  position: absolute;
+  bottom: 45%;
+  left: 5%;
+  transform: rotate(-22.2deg);
+  transform: rotate(50deg);
+  transform-origin: top left;
+  /* transition: transform 0.5s ease-in; */
+  animation: batMove 0.8s ease-in 0.8s infinite;
+  
+}
+.bat img{
+  width: 30px;
+}
+.ball{
+  position: absolute;
+  bottom: 70%;
+  left: 25%;
+  transform: translate(980px, -380px);
+  /* transition: transform 0.5s ease-out 0.5s; */
+  animation: ballMove 0.8s ease-in 0.8s infinite;
+}
+.ball img{
+  width: 30px;
+}
+.hand{
+  position: absolute;
+  bottom: 20%;
+  left: 25.4%;
+  transform: translate(980px, -380px) rotate(0deg);
+  transform-origin: bottom left right;
+  animation: handMove 0.8s ease-in 0.8s infinite;
+}
+.hand img{
+  width: 65px;
+} 
+
+
+/* ============== 
+Transition:Hover 
+================
+.pitch:hover .bat{
+  transform: rotate(-22.2deg);
+}
+.pitch:hover .ball{
+  transform: translate(900px, -440px); 
+}
+----------END---------- */
+
+
+@keyframes batMove {
+  0%{
+    transform: rotate(50deg);
+  }
+  25%{
+    transform: rotate(50deg);
+  }
+  50%{
+    transform: rotate(-22.2deg);
+  }
+  75%{
+    transform: rotate(-50deg);
+  }
+  100%{
+    transform: rotate(50deg);
+  }
+} 
+
+@keyframes ballMove {
+  0%{
+    transform: translate(980px, -380px);
+  }
+  25%{
+    bottom: 40%;
+    left: 45%;
+    transform: translate(0);
+  }
+  50%{
+    bottom: 150%;
+    left: 13%;
+    transform: translate(0);
+  }
+  75%{
+    transform: translate(700px, -665px);
+  }
+  100%{
+    transform: translate(980px, -380px);
+  }
+}
+@keyframes handMove {
+  0%{
+    transform: translate(980px, -380px) rotate(0deg);
+  }
+  25%{
+    transform: translate(980px, -380px) rotate(-45deg);
+  }
+  50%{
+    transform: translate(980px, -380px) rotate(-90deg);
+  }
+  75%{
+    transform: translate(980px, -380px) rotate(0deg);
+  }
+  100%{
+    transform: translate(980px, -380px) rotate(0deg);
+  }
+}
